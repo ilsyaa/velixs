@@ -151,6 +151,9 @@
                                             @elseif($brow->browser == 'Firefox')
                                                 <img src="{{ asset('adminpanel') }}/images/browser/mozila-firefox.png" class="rounded me-1" height="30" alt="Mozila Firefox" />
                                                 <h6 class="align-self-center mb-0">{{ $brow->browser }}</h6>
+                                            @elseif($brow->browser == 'Mozilla')
+                                                <img src="{{ asset('adminpanel') }}/images/browser/mozila-firefox.png" class="rounded me-1" height="30" alt="Mozila Firefox" />
+                                                <h6 class="align-self-center mb-0">{{ $brow->browser }}</h6>
                                             @elseif($brow->browser == 'Edge' || $brow->browser == 'IE')
                                                 <img src="{{ asset('adminpanel') }}/images/browser/internet-explorer.png" class="rounded me-1" height="30" alt="Internet Explorer" />
                                                 <h6 class="align-self-center mb-0">{{ $brow->browser }}</h6>
@@ -228,13 +231,13 @@
                 colors: ['#2bdac7', '#a4f8cd'],
                 series: [{
                     name: 'Main',
-                    data: {{ $visitorperday_master }}
+                    data: {!! $visitorperday_master !!}
                 }, {
                     name: 'Page',
-                    data: {{ $visitorperday_page }}
+                    data: {!! $visitorperday_page !!}
                 }],
                 xaxis: {
-                    categories: {{ $daysinmonth }}
+                    categories: {!! $daysinmonth !!}
                 },
                 fill: {
                     opacity: 0.8,
@@ -292,7 +295,7 @@
                 },
                 series: [{
                     name: 'Visitors',
-                    data: {{ $visitorcountrycount }}
+                    data: {!! $visitorcountrycount !!}
                 }],
                 xaxis: {
                     categories: {!! $visitorcountry !!}

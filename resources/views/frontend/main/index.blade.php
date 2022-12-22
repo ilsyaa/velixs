@@ -7,7 +7,7 @@
                 <h1 class="display-5 fw-bold">{!! $websetting->app_title !!}</h1>
                 <h1 class="display-6 text-muted fw-bold">A Place for Various Web App and Template needs.</h1>
                 <p class="text-secondary">Place all your programming needs, such as free program tutorials. provides source code, templates, and much more.</p>
-                <a href="{!! route('front.product.index') !!}" class="btn btn-primary btn-sm rounded-5 px-3 mb-2"><i class="bi bi-caret-right"></i> Digital Products</a>
+                <a href="{!! route('front.product.category') !!}" class="btn btn-primary btn-sm rounded-5 px-3 mb-2"><i class="bi bi-caret-right"></i> Digital Products</a>
                 <a href="{!! route('front.tutorial.index') !!}" class="btn btn-dark btn-sm rounded-5 px-3 mb-2"><i class="bi bi-journal-text"></i> Tutorial</a>
             </div>
         </div>

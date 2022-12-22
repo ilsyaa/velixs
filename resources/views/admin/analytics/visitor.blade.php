@@ -145,10 +145,10 @@
                 colors: ['#2bdac7'],
                 series: [{
                     name: 'Main',
-                    data: {{ $visitorperday }}
+                    data: {!! $visitorperday !!}
                 }],
                 xaxis: {
-                    categories: {{ $daysinmonth }}
+                    categories: {!! $daysinmonth !!}
                 },
                 fill: {
                     opacity: 0.8,
@@ -206,7 +206,7 @@
                 },
                 series: [{
                     name: 'Visitors',
-                    data: {{ $visitorcountrycount }}
+                    data: {!! $visitorcountrycount !!}
                 }],
                 xaxis: {
                     categories: {!! $visitorcountry !!}
