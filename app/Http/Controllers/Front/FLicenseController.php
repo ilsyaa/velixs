@@ -61,7 +61,7 @@ class FLicenseController extends Controller
         $license = License::where(['id' => $request->id, 'used' => 'no'])->first();
         if ($license) {
             if ($license->type == "product") {
-                $product = ProductLibrary::where(['product_id', $license->item_id, 'user_id' => auth()->user()->id])->first();
+                $product = ProductLibrary::where(['product_id' => $license->item_id, 'user_id' => auth()->user()->id])->first();
                 if (!$product) {
                     ProductLibrary::create([
                         'user_id' => auth()->user()->id,
